@@ -1,0 +1,12 @@
+"""Модуль, содержащий инициализацию окна серверного приложения"""
+from PyQt5.QtWidgets import QMainWindow
+
+from server.ui.server_monitor import Ui_ServerWindow as server_ui_class
+
+
+class ServerMonitorWindow(QMainWindow):
+    """Класс инициализации главного окна сервера"""
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.ui = server_ui_class()
+        self.ui.setupUi(self)
